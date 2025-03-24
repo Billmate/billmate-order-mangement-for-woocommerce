@@ -3,7 +3,7 @@
  * Plugin Name:     Qvickly Order Management for WooCommerce
  * Plugin URI:      https://github.com/Billmate/billmate-order-mangement-for-woocommerce
  * Description:     Provides order management for Qvickly Checkout.
- * Version:         __STABLE_TAG__
+ * Version:         1.3.3
  * Author:          Billmate, Krokedil
  * Author URI:      https://billmate.se/
  * Developer:       Billmate, Krokedil
@@ -14,7 +14,7 @@
  * WC requires at least: 5.0.0
  * WC tested up to: 7.6.1
  *
- * Copyright:       © 2020-2024 Billmate in collaboration with Krokedil.
+ * Copyright:       © 2020-2025 Billmate in collaboration with Krokedil.
  * License:         GNU General Public License v3.0
  * License URI:     http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -26,11 +26,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants.
-define( 'BILLMATE_ORDER_MANAGEMENT_VERSION', '1.3.2' );
+define( 'BILLMATE_ORDER_MANAGEMENT_VERSION', '1.3.3' );
 define( 'BILLMATE_ORDER_MANAGEMENT_URL', untrailingslashit( plugins_url( '/', __FILE__ ) ) );
 define( 'BILLMATE_ORDER_MANAGEMENT_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'BILLMATE_ORDER_MANAGEMENT_ENV', 'https://api.billmate.se' );
-
 
 if ( ! class_exists( 'Billmate_Order_Management_For_WooCommerce' ) ) {
 
@@ -38,6 +37,27 @@ if ( ! class_exists( 'Billmate_Order_Management_For_WooCommerce' ) ) {
 	 * Main class for the plugin.
 	 */
 	class Billmate_Order_Management_For_WooCommerce {
+		/**
+		 * API instance.
+		 *
+		 * @var BOM_API
+		 */
+		public $api;
+
+		/**
+		 * Logger instance.
+		 *
+		 * @var BOM_Logger
+		 */
+		public $logger;
+
+		/**
+		 * Order management instance.
+		 *
+		 * @var BOM_Order_Management
+		 */
+		public $order_management;
+
 		/**
 		 * The reference the *Singleton* instance of this class.
 		 *
@@ -130,7 +150,6 @@ if ( ! class_exists( 'Billmate_Order_Management_For_WooCommerce' ) ) {
 			include_once BILLMATE_ORDER_MANAGEMENT_PATH . '/classes/requests/helpers/class-bom-refund-data-articles-helper.php';
 			include_once BILLMATE_ORDER_MANAGEMENT_PATH . '/classes/requests/helpers/class-bom-refund-data-payment-data-helper.php';
 			include_once BILLMATE_ORDER_MANAGEMENT_PATH . '/classes/requests/helpers/class-bom-refund-data-cart-helper.php';
-
 		}
 
 		/**
@@ -199,7 +218,6 @@ if ( ! class_exists( 'Billmate_Order_Management_For_WooCommerce' ) ) {
 			);
 			return array_merge( $plugin_links, $links );
 		}
-
 	}
 	Billmate_Order_Management_For_WooCommerce::get_instance();
 
