@@ -3,7 +3,7 @@
  * Plugin Name:     Qvickly Order Management for WooCommerce
  * Plugin URI:      https://github.com/Billmate/billmate-order-mangement-for-woocommerce
  * Description:     Provides order management for Qvickly Checkout.
- * Version:         1.3.3
+ * Version:         __STABLE_TAG__
  * Author:          Billmate, Krokedil
  * Author URI:      https://billmate.se/
  * Developer:       Billmate, Krokedil
