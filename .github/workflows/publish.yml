@@ -12,6 +12,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+
+      # Install SVN ( Subversion )
+      - name: Install SVN ( Subversion )
+        run: |
+          sudo apt-get update
+          sudo apt-get install subversion
+
       - name: Deploy
         run: chmod +x ./deploy.sh && ./deploy.sh
         env:
