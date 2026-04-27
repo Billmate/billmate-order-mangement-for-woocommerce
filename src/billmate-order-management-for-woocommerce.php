@@ -12,9 +12,9 @@
  * Domain Path:     /languages
  *
  * WC requires at least: 5.0.0
- * WC tested up to: 10.3.6
+ * WC tested up to: 10.7.0
  *
- * Copyright:       © 2020-2025 Billmate in collaboration with Krokedil.
+ * Copyright:       © 2020-2026 Billmate in collaboration with Krokedil.
  * License:         GNU General Public License v3.0
  * License URI:     http://www.gnu.org/licenses/gpl-3.0.html
  *

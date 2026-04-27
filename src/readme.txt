@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 7.0
 WC requires at least: 5.0.0
-WC tested up to: 10.3.6
+WC tested up to: 10.7.0
 Stable tag: __STABLE_TAG__
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -41,7 +41,7 @@ We have a portal for users to provide feedback, [https://woocommerce.portal.bill
 The easiest way to report a bug is to email us at [support@billmate.se](mailto:support@billmate.se). If you however are a developer you can feel free to raise an issue on GitHub, [https://github.com/Billmate/billmate-order-mangement-for-woocommerce](https://github.com/Billmate/billmate-order-mangement-for-woocommerce).
 
 == Changelog ==
-= 2025.12.10    - version 1.3.3 =
+= 2026.04.27    - version 1.3.3 =
 * Fix           - Resolved PHP 8.2 deprecation of dynamic properties warning.
 
 = 2024.02.28    - version 1.3.2 =
